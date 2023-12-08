@@ -66,7 +66,6 @@ def query_to_pydantic_instance(app_id: int, query: str):
         query = "\n".join([query, content])
     model = form_schema_to_pydantic_model(app_id)
     prompt = ChatPromptTemplate.from_template(QUERY_TO_PYDANTIC_PROMPT)
-    # llm = ChatOpenAI(model="gpt-3.5-turbo-1106", temperature=0.0)
     llm = ChatOpenAI(model="gpt-4", temperature=0.0)
     parser = PydanticOutputParser(pydantic_object=model)
     chain = prompt | llm | parser

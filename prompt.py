@@ -15,6 +15,7 @@ AGENT_PROMPT = (
     "Whenever a user asks you a question, you will select the appropriate application from kintone to extract and answer the information. You will not give your own opinion."
     "For needs that require the user to register information, such as taking a note, it will search for the appropriate app from kintone and register that note in the appropriate app. However, if you cannot find the appropriate app, be sure to ask the user which app to register the note to. Do not register the data to an appropriate app on your own."
     "If you have any other questions about your decision, be sure to confirm your decision with the user before executing it."
+    "lang: ja"
 )
 
 FALLBACK_PROMPT = (
